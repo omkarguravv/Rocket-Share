@@ -33,6 +33,7 @@ app.post('/upload', upload.single('file'), async (req, res) => {
     if(req.body.text != null && req.body.text !== ""){
         filedata.password = await bcrypt.hash(req.body.text,10);
     }
+    console.log(req.file.path);
     
 
     try {
@@ -71,6 +72,6 @@ async function handleDownload(req,res) {
   
 
 }
-app.listen(process.env.PORT||3333, () => {
+app.listen(process.env.PORT||8080, () => {
   console.log(`Server started on port ${process.env.PORT}`);
 });
