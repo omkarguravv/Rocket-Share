@@ -28,7 +28,7 @@ function FileUploader() {
     console.log(text);
     
     try {
-        const response = await axios.post('https://fileshare-link.onrender.com/upload', formData, {
+        const response = await axios.post('https://rocket-share.onrender.com/upload', formData, {
           // https://fileshare-link.onrender.com/upload
           // https://rocket-share.onrender.com/upload
           headers: {

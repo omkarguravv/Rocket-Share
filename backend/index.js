@@ -33,7 +33,6 @@ app.post('/upload', upload.single('file'), async (req, res) => {
     if(req.body.text != null && req.body.text !== ""){
         filedata.password = await bcrypt.hash(req.body.text,10);
     }
-    console.log(req.file.path);
     
 
     try {
@@ -52,7 +51,7 @@ app.post('/upload', upload.single('file'), async (req, res) => {
 
 app.route("/file/:id").get(handleDownload).post(handleDownload);
 app.get('/test',(req,res)=>{
-    res.send("<h1>Testing Routes!</h1>");
+    res.send("<h1>I am Inevitable!!</h1>");
 })
 
 async function handleDownload(req,res) {
@@ -72,6 +71,6 @@ async function handleDownload(req,res) {
   
 
 }
-app.listen(process.env.PORT||8080, () => {
-  console.log(`Server started on port ${process.env.PORT}`);
+app.listen(process.env.PORT||3333, () => {
+  console.log('Server started on port 3333');
 });
