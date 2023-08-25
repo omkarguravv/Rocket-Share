@@ -1,17 +1,12 @@
-import React from 'react'
-import FileUploader from './Pages/FileUploader';
-
-
+import React from "react";
+import FileUploader from "./Pages/FileUploader";
 
 function App() {
-  return(<>
-
-  <FileUploader/>
-
-  
-   
-  
-  </>);
+  return (
+    <>
+      <FileUploader />
+    </>
+  );
 }
 
-export default App
+export default App;
